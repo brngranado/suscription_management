@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+   dev:
+        container_name: suscription_management
+        image: express-app
+        build:
+            context: .
+            target: development
+            dockerfile: ./Dockerfile
+        command: npm run start:dev
+        ports:
+            - 8001:8001
+        networks:
+            - express-network
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+            - /usr/src/app/dist
+        restart: unless-stopped
+
+networks:
+    express-network:

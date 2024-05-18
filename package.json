@@ -1,0 +1,36 @@
+{
+  "name": "suscription_management",
+  "version": "1.0.0",
+  "description": "API suscription-management",
+  "main": "app.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "dev": "ts-node-dev --respawn --transpile-only app.ts",
+    "start:dev": "tsc-watch --onSuccess \"node dist/app.js\""
+  },
+  "author": "Bryan Granado",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.6.0",
+    "mongoose": "^8.3.3",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.8",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8.57.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^2.0.0",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^5.4.5"
+  }
+}
